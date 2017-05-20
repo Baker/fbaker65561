@@ -1,0 +1,14 @@
+body { 
+    background-color: #252525;
+    font-family: "myriad-pro", Helvetica Neue, Helvetica, sans-serif;
+    text-align: center;
+    color: #f4f4f4;
+}
+h1 { 
+    font-weight: 300;
+    padding-top: 20%;
+}
+a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
