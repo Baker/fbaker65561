@@ -10,5 +10,9 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #f4f4f4;
+    color: darkorange;
+}
+ul li {
+    text-decoration: none;
+    list-style: none
 }
