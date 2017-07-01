@@ -1,53 +1,22 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Rollover Images</title>
-<link href="../_css/site.css" rel="stylesheet">
-<style>
-#gallery img {
-	display: inline-block;
-	margin: 10px;
-	border: 1px solid rgb(0,0,0);
-}
-</style>
-<script src="../_js/jquery.min.js"></script>
-
-<script>
-$(document).ready(function() {
- $('#gallery img').each(function() {
-	var imgFile = $(this).attr('src');
-	var preloadImage = new Image();
-  	var imgExt = /(\.\w{3,4}$)/;
- 	 preloadImage.src = imgFile.replace(imgExt,'_h$1');
-		
-	$(this).hover(
-		function() {
-			$(this).attr('src', preloadImage.src);
-		},
-		function () {
-			$(this).attr('src', imgFile);
-		}
-	); 
-}); 
-}); 
-</script>
+    <title>Francis Baker | JS/jQuery</title>
+    
+    <link rel="stylesheet" href="//ceweb.uml.edu/fbake65561/css/main.css">
+    <link rel="stylesheet" href="//ceweb.uml.edu/fbake65561/css/typeface.css">
 </head>
 <body>
-<div class="wrapper">
-<header>
-    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
-</header>
-<div class="content">
-	<div class="main">
-		<h1>Rollover Images</h1>
-		<p>Mouse over the images below</p>
-		<div id="gallery"> <a href="../_images/large/td1.jpg"><img src="../_images/small/td2.jpg" width="70" height="70" alt="blue"></a></div>
-	</div>
-</div>
-<footer>
-    <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
-</footer>
-</div>
+    <h1>Rollover Project. </h1>
+    <p>This is just a basic rollover image. </p>
+    <img src="brady_pre.jpg" onmouseover="rollover(this)" onmouseout="rollaway(this)" width="300" height="300">
+    <script>
+        function rollover(brady_pre){
+            brady_pre.src = "brady_throw.jpg";
+        }
+        function rollaway(away){
+            away.src = "away.jpg";
+        }
+    </script>
 </body>
+<footer></footer>
 </html>
