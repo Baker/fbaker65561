@@ -1,0 +1,27 @@
+<script language="JavaScript" type="text/javascript">
+    function validateForm() {
+        var verifyEmail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/); //I have used this prior orignated from > http://emailregex.com/
+        var getName = document.getElementsByClassName("inputname");
+        var getEmail = document.getElementsByClassName("inputemail");
+        
+        if(getName.value == '') {
+            alert("Ruh roh please try that again.");
+            getName.focus();
+            return false;
+        }
+        if(!verifyEmail.test(getEmail.value)) {
+            alert("Ruh roh please try that again.");
+            getEmail.focus();
+            return false;
+        }
+    }
+</script>
+<style type="text/css">
+    input { margin: 2px;}
+</style>
+
+<form name="" onsubmit="return validateForm()" method="post">
+    <input class="inputname" type="name" placeholder="Name Here">  <br>
+    <input class="inputemail" type="email" placeholder="Email Here"> <br>
+    <input type="submit" value="Submit">
+</form>

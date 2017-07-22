@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animated Nav Bar</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link href="sm-core-css.css" rel="stylesheet">
+<link href="sm-simple.css" rel="stylesheet">
+<script src="../_js/jquery.min.js"></script>
+<script src="jquery.smartmenus.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+      $ul.slideUp(250, complete);
+    }
+  }); //end smartmenus
+}); // end ready
+</script>
+</head>
+<body>
+	<h1>Project 3: Animated Navigation Bar</h1>
+      <ul class="sm sm-simple">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">More Info</a>
+          <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Important Things</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tutorials </a>
+          <ul>
+            <li><a href="#">Fancy</a>
+              <ul>
+                <li><a href="#">Using a Variable</a></li>
+                <li><a href="#">Asking for Information</a></li>
+                <li><a href="#">Arrays</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Here look here</a>
+              <ul>
+                <li><a href="#">Hello</a></li>
+                <li><a href="#">Good</a></li>
+                <li><a href="#">Day</a>
+                </li>
+              </ul>
+            </li><a href="#">Another List</a></li>
+          </ul>
+        </li>
+      </ul>
+</body>
+</html>
+</html>
